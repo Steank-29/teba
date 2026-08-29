@@ -103,7 +103,7 @@ function Navbar() {
 
           {/* Center: Navigation Links (Desktop only) */}
           <div className="hidden md:flex items-center gap-10">
-            <a href="#" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
+            <a href="/" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
               Home
             </a>
             <a href="#" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
@@ -112,7 +112,7 @@ function Navbar() {
             <a href="#" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
               Exclusive
             </a>
-            <a href="#" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
+            <a href="/contact" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
               Contact
             </a>
           </div>
@@ -212,7 +212,7 @@ function Navbar() {
         <div className="px-6 py-4 flex flex-col gap-4 overflow-y-auto h-[calc(100%-140px)]">
           {/* Home */}
           <a 
-            href="#" 
+            href="/" 
             className="font-serif text-xl text-teba-secondary hover:text-teba-rose transition-colors border-b border-teba-beige/10 pb-3"
             onClick={closeDrawer}
           >
@@ -286,7 +286,7 @@ function Navbar() {
 
           {/* Contact */}
           <a 
-            href="#" 
+            href="/contact" 
             className="font-serif text-xl text-teba-secondary hover:text-teba-rose transition-colors border-b border-teba-beige/10 pb-3"
             onClick={closeDrawer}
           >

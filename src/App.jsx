@@ -1,13 +1,20 @@
-import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
 import Home from './components/Home'
+import Contact from './components/Contact'
 import './index.css'
 
 function App() {
   return (
-    <div className="min-h-screen bg-teba-cream">
-      <Navbar />
-      <Home />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* Add more routes here as you build them */}
+        </Routes>
+      </Layout>
+    </Router>
   )
 }
 
