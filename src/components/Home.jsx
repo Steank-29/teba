@@ -1,6 +1,11 @@
 import React from 'react'
 import WebBg from '../assets/Web.png'
 import MobileBg from '../assets/Mobile.png'
+import ClassicImg from '../assets/Classic.png'
+import ElegantImg from '../assets/Elegant.png'
+import MinimalImg from '../assets/Minimal.png'
+import CasualImg from '../assets/Casual.png'
+import DailyImg from '../assets/Daily.png'
 
 function Home() {
   return (
@@ -30,7 +35,6 @@ function Home() {
       <div className="absolute inset-0 bg-black/5" />
 
       {/* Content */}
-      {/* min-h matches the mobile bg (60vh) so the badges sit right under the hero, not 100vh forced */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 min-h-[60vh] md:min-h-screen flex items-start pt-20 sm:pt-24 md:pt-28 lg:pt-32">
         <div className="max-w-xl mt-8 sm:mt-12 md:mt-0 ml-0 md:ml-8 lg:ml-16">
           {/* Subtitle */}
@@ -137,6 +141,133 @@ function Home() {
                 Shop with confidence
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Shop by Category Section */}
+      <div className="relative z-10 w-full bg-teba-cream py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          {/* Section Title */}
+          <div className="mb-10 sm:mb-12">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-teba-primary inline-block">
+              Shop by Category
+              <span className="block w-full h-1 bg-teba-primary mt-1 rounded-full"></span>
+            </h2>
+          </div>
+
+          {/* Category Cards Grid - 2 on mobile, 3 on tablet, 4 on desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            {/* Card 1 - Classic */}
+            <div className="bg-teba-beige/40 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-teba-beige/20">
+              <div className="h-40 sm:h-48 bg-teba-blush overflow-hidden">
+                <img 
+                  src={ClassicImg} 
+                  alt="Classic" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-3 sm:p-4 text-center">
+                <h3 className="font-serif text-base sm:text-xl font-semibold text-teba-dark mb-1 sm:mb-2">
+                  Classic
+                </h3>
+                <a href="#" className="font-serif text-teba-secondary hover:text-teba-rose transition-colors inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-sm group">
+                  Shop Now
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Card 2 - Elegant */}
+            <div className="bg-teba-beige/40 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-teba-beige/20">
+              <div className="h-40 sm:h-48 bg-teba-blush overflow-hidden">
+                <img 
+                  src={ElegantImg} 
+                  alt="Elegant" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-3 sm:p-4 text-center">
+                <h3 className="font-serif text-base sm:text-xl font-semibold text-teba-dark mb-1 sm:mb-2">
+                  Elegant
+                </h3>
+                <a href="#" className="font-serif text-teba-secondary hover:text-teba-rose transition-colors inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-sm group">
+                  Shop Now
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Card 3 - Minimal */}
+            <div className="bg-teba-beige/40 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-teba-beige/20">
+              <div className="h-40 sm:h-48 bg-teba-blush overflow-hidden">
+                <img 
+                  src={MinimalImg} 
+                  alt="Minimal" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-3 sm:p-4 text-center">
+                <h3 className="font-serif text-base sm:text-xl font-semibold text-teba-dark mb-1 sm:mb-2">
+                  Minimal
+                </h3>
+                <a href="#" className="font-serif text-teba-secondary hover:text-teba-rose transition-colors inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-sm group">
+                  Shop Now
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Card 4 - Casual */}
+            <div className="bg-teba-beige/40 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-teba-beige/20">
+              <div className="h-40 sm:h-48 bg-teba-blush overflow-hidden">
+                <img 
+                  src={CasualImg} 
+                  alt="Casual" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-3 sm:p-4 text-center">
+                <h3 className="font-serif text-base sm:text-xl font-semibold text-teba-dark mb-1 sm:mb-2">
+                  Casual
+                </h3>
+                <a href="#" className="font-serif text-teba-secondary hover:text-teba-rose transition-colors inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-sm group">
+                  Shop Now
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Card 5 - Daily */}
+            <div className="bg-teba-beige/40 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-teba-beige/20">
+              <div className="h-40 sm:h-48 bg-teba-blush overflow-hidden">
+                <img 
+                  src={DailyImg} 
+                  alt="Daily" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-3 sm:p-4 text-center">
+                <h3 className="font-serif text-base sm:text-xl font-semibold text-teba-dark mb-1 sm:mb-2">
+                  Daily
+                </h3>
+                <a href="#" className="font-serif text-teba-secondary hover:text-teba-rose transition-colors inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-sm group">
+                  Shop Now
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

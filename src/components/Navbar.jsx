@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/Teba.png'
 
 function Navbar() {
@@ -94,27 +95,27 @@ function Navbar() {
           </button>
 
           {/* Logo + Brand (Centered on mobile/tablet) */}
-          <div className="flex items-center gap-3 md:gap-4">
+          <Link to="/" className="flex items-center gap-3 md:gap-4">
             <img src={logo} alt="Teba" className="h-9 sm:h-10 md:h-12 w-auto" />
             <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-teba-secondary tracking-wider capitalize">
               Téba
             </span>
-          </div>
+          </Link>
 
           {/* Center: Navigation Links (Desktop only) */}
           <div className="hidden md:flex items-center gap-10">
-            <a href="/" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
+            <Link to="/" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
               Home
-            </a>
+            </Link>
             <a href="#" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
               Shop
             </a>
             <a href="#" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
               Exclusive
             </a>
-            <a href="/contact" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
+            <Link to="/contact" className="font-serif text-lg text-teba-secondary hover:text-teba-rose transition-colors tracking-wide">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Right: Icons */}
@@ -132,12 +133,12 @@ function Navbar() {
               </svg>
             </button>
 
-            {/* Person Icon (hidden on mobile, shown on tablet/desktop) */}
-            <button className="hidden sm:block text-teba-secondary hover:text-teba-rose transition-colors">
+            {/* Person Icon (hidden on mobile, shown on tablet/desktop) - Links to /signin */}
+            <Link to="/signin" className="hidden sm:block text-teba-secondary hover:text-teba-rose transition-colors">
               <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
-            </button>
+            </Link>
 
             {/* Cart Icon - Shopping Bag style */}
             <button className="text-teba-secondary hover:text-teba-rose transition-colors relative">
@@ -199,25 +200,25 @@ function Navbar() {
         </div>
 
         {/* Drawer Header - Logo Centered */}
-        <div className="flex items-center justify-center p-6 border-b border-teba-beige/20">
+        <Link to="/" className="flex items-center justify-center p-6 border-b border-teba-beige/20" onClick={closeDrawer}>
           <div className="flex items-center gap-4">
             <img src={logo} alt="Teba" className="h-12 w-auto" />
-            <span className="font-serif text-3xl font-bold text-teba-secondary tracking-wider capitalize ">
+            <span className="font-serif text-3xl font-bold text-teba-secondary tracking-wider capitalize">
               Téba
             </span>
           </div>
-        </div>
+        </Link>
 
         {/* Drawer Navigation Links */}
         <div className="px-6 py-4 flex flex-col gap-4 overflow-y-auto h-[calc(100%-140px)]">
           {/* Home */}
-          <a 
-            href="/" 
+          <Link 
+            to="/" 
             className="font-serif text-xl text-teba-secondary hover:text-teba-rose transition-colors border-b border-teba-beige/10 pb-3"
             onClick={closeDrawer}
           >
             Home
-          </a>
+          </Link>
 
           {/* Shop with Toggle */}
           <div className="border-b border-teba-beige/10 pb-3">
@@ -285,22 +286,24 @@ function Navbar() {
           </div>
 
           {/* Contact */}
-          <a 
-            href="/contact" 
+          <Link 
+            to="/contact" 
             className="font-serif text-xl text-teba-secondary hover:text-teba-rose transition-colors border-b border-teba-beige/10 pb-3"
             onClick={closeDrawer}
           >
             Contact
-          </a>
+          </Link>
 
-          {/* Sign In Button - Tube Shape */}
+          {/* Sign In Button - Tube Shape - Links to /signin */}
           <div className="mt-auto pt-4 border-t border-teba-beige/20">
-            <button className="w-full flex items-center justify-center gap-3 bg-teba-secondary text-teba-cream font-serif text-lg py-3 px-6 rounded-full hover:bg-teba-primary transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              Sign In
-            </button>
+            <Link to="/signin" onClick={closeDrawer}>
+              <button className="w-full flex items-center justify-center gap-3 bg-teba-secondary text-teba-cream font-serif text-lg py-3 px-6 rounded-full hover:bg-teba-primary transition-colors">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Sign In
+              </button>
+            </Link>
 
             {/* Footer Text with Téba */}
             <p className="text-center font-serif text-sm text-teba-brown mt-4">
