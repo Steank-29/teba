@@ -6,6 +6,8 @@ import ElegantImg from '../assets/Elegant.png'
 import MinimalImg from '../assets/Minimal.png'
 import CasualImg from '../assets/Casual.png'
 import DailyImg from '../assets/Daily.png'
+import HomeTWImg from '../assets/HomeTW.png'
+import HomeTMImg from '../assets/HomeTM.png'
 
 function Home() {
   return (
@@ -267,7 +269,51 @@ function Home() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
 
+      {/* Téba Difference Section */}
+      <div className="relative z-10 w-full bg-teba-cream/80 py-0">
+        <div className="container mx-auto px-0">
+          <div className="flex flex-col lg:flex-row items-stretch">
+            {/* Image - 33% width on web, full width on mobile */}
+            <div className="w-full lg:w-1/3">
+              {/* Web Image */}
+              <img 
+                src={HomeTWImg} 
+                alt="Téba Difference" 
+                className="hidden lg:block w-full h-full object-cover"
+              />
+              {/* Mobile Image */}
+              <img 
+                src={HomeTMImg} 
+                alt="Téba Difference" 
+                className="block lg:hidden w-full h-auto object-cover"
+              />
+            </div>
+
+            {/* Text Content - 67% width on web */}
+            <div className="w-full lg:w-2/3 text-center lg:text-left px-4 sm:px-6 lg:px-8 xl:px-12 py-12 sm:py-16 flex flex-col justify-center">
+              <p className="font-serif text-teba-primary text-sm sm:text-base tracking-[0.2em] uppercase mb-3">
+                The Téba Difference
+              </p>
+              
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-teba-secondary mb-4">
+                Elegance in Every Detail
+              </h2>
+              
+              <p className="font-serif text-teba-black text-sm sm:text-base max-w-2xl mb-6 leading-relaxed">
+                Thoughtfully designed, Beautifully made.
+              </p>
+              
+              <button className="bg-teba-beige/20 text-teba-primary font-serif text-sm sm:text-base px-8 sm:px-10 py-3 sm:py-3.5 rounded-sm border border-teba-primary hover:bg-teba-primary hover:text-teba-cream transition-all duration-300 inline-flex items-center gap-2 group w-fit mx-auto lg:mx-0">
+                Learn More
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
